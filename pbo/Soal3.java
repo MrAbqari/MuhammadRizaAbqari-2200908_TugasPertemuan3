@@ -8,7 +8,12 @@ public class Soal3 {
         System.out.print("Masukkan jumlah peserta: ");
         int jumlahPeserta = scanner.nextInt();
 
-        int jumlahMobil = (jumlahPeserta / 7) + ((jumlahPeserta % 7 == 0) ? 0 : 1);
+        int jumlahMobil;
+        if (jumlahPeserta % 7 == 0) {
+            jumlahMobil = jumlahPeserta / 7;
+        } else {
+            jumlahMobil = (jumlahPeserta / 7) + 1;
+        }
 
         System.out.println("Jumlah mobil yang diperlukan: " + jumlahMobil);
 
